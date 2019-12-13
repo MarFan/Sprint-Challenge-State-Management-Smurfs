@@ -1,6 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
+import { BrowserRouter as Router, withRouter } from 'react-router-dom';
+// import "./index.css";
 import App from "./components/App";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+import 'semantic-ui-css/semantic.min.css'
+
+const AppWithRouter = withRouter(App);
+
+ReactDOM.render(<Router><App /></Router>, document.getElementById("root"));
